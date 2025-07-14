@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>法事预约 - 厦门太清宫</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">道观介绍</a></li>
+      <li><a href="reservation.html">法事预约</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>法事预约</h2>
+    <section class="reservation-step">
+      <h3>1. 填写个人信息</h3>
+      <form id="reservationForm">
+        <label>姓名：<input type="text" name="name" required></label><br>
+        <label>电话：<input type="tel" name="phone" required></label><br>
+        <label>祈福/超度对象（可选）：<input type="text" name="target"></label><br>
+        <button type="button" onclick="showActivity()">下一步</button>
+      </form>
+    </section>
+    <section class="reservation-step" id="activityStep" style="display:none;">
+      <h3>2. 活动内容</h3>
+      <div class="activity-content">
+        <p>（活动内容待补充，可包括法事类型、时间、流程、注意事项等）</p>
+      </div>
+      <button type="button" onclick="showBooking()">下一步</button>
+    </section>
+    <section class="reservation-step" id="bookingStep" style="display:none;">
+      <h3>3. 预约系统</h3>
+      <div class="booking-info">
+        <label>预约日期：<input type="date" name="date" required></label><br>
+        <label>备注（可选）：<input type="text" name="remark"></label><br>
+      </div>
+      <button type="button" onclick="showPaymentInfo()">下一步</button>
+    </section>
+    <section class="reservation-step" id="paymentStep" style="display:none;">
+      <h3>4. 付款信息与客服</h3>
+      <div class="payment-info">
+        <p>请扫码付款：</p>
+        <img src="images/qrcode.jpg" alt="付款二维码" style="width:180px;">
+        <p>付款后请截图，添加微信客服进行核实。</p>
+        <p>微信客服：</p>
+        <img src="images/wechat_kefu.jpg" alt="微信客服二维码" style="width:180px;">
+        <p>如有疑问请致电：<strong>0592-2092459</strong></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 厦门太清宫</p>
+  </footer>
+</body>
+</html> 

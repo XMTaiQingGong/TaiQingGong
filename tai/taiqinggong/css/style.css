@@ -1,0 +1,128 @@
+body {
+  font-family: "Noto Serif SC", serif;
+  background: #f5e9d4;
+  color: #7b3f00;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: #a52a2a;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  color: #fffbe6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+header, main, footer {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+h1, h2, h3 {
+  font-family: "Noto Serif SC", serif;
+  color: #a52a2a;
+}
+button {
+  background: #a52a2a;
+  color: #fffbe6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #7b3f00;
+}
+form, section {
+  background: #fffbe6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(165,42,42,0.08);
+  max-width: 400px;
+}
+img {
+  border-radius: 8px;
+  margin: 10px 0;
+}
+footer {
+  color: #a52a2a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.promo-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.promo-gallery img {
+  border: 2px solid #a52a2a;
+  background: #fffbe6;
+  box-shadow: 0 2px 8px rgba(165,42,42,0.08);
+  transition: transform 0.2s;
+}
+.promo-gallery img:hover {
+  transform: scale(1.05);
+}
+.promo-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.promo-gallery-grid figure {
+  margin: 0;
+  background: #fffbe6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(165,42,42,0.08);
+  border: 2px solid #a52a2a;
+  overflow: hidden;
+  text-align: center;
+}
+.promo-gallery-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+.promo-gallery-grid figcaption {
+  font-size: 14px;
+  color: #7b3f00;
+  padding: 4px 0 8px 0;
+}
+@media (max-width: 600px) {
+  .promo-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .promo-gallery-grid img {
+    height: 180px;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 601px) {
+  nav ul {
+    flex-direction: row;
+  }
+} 
